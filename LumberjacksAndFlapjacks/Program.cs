@@ -11,10 +11,11 @@ namespace LumberjacksAndFlapjacks
         {
 
             Queue<Lumberjack> lumberjackQueue = new Queue<Lumberjack>();
-            string lumberjacksName;
+
 
             while (true)
             {
+                string lumberjacksName;
                 if (lumberjackQueue.Count == 0)
                     Console.Write("First lumberjack's name: ");
                 else
@@ -24,25 +25,20 @@ namespace LumberjacksAndFlapjacks
                 Console.Write("\nNumber of flapjacks: ");
                 if (int.TryParse(Console.ReadLine(), out int numberOfFlapjacks))
                 {
-                    lumberjackQueue.Enqueue(new Lumberjack(lumberjacksName));
+                    Lumberjack lumberjack = new Lumberjack(lumberjacksName);
                     for (int i = 0; i < numberOfFlapjacks; i++)
                     {
-                        lumberjackQueue.Peek().TakeFlapjack((Flapjack)random.Next(0, 3));
+                        lumberjack.TakeFlapjack((Flapjack)random.Next(0, 3));
                     }
+                    lumberjackQueue.Enqueue(lumberjack);
 
                 }
             }
             while (lumberjackQueue.Count != 0)
             {
-                for (int i = 0; i < lumberjackQueue.Count; i++)
-                {
-                    while (lumberjackQueue.Peek().EatFlapjacks() ==  )
-                    {
-                        lumberjackQueue.Dequeue().TakeFlapjack()
-
-                    }
-                    lumberjackQueue.Dequeue();
-                }
+                lumberjackQueue.Peek().EatFlapjacks();
+                lumberjackQueue.Dequeue();
+            }
         }
     }
 }

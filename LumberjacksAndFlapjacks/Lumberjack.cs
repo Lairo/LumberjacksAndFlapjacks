@@ -16,16 +16,15 @@ namespace LumberjacksAndFlapjacks
 
         public void EatFlapjacks()
         {
-            Console.WriteLine($"{Name} is eating flapjacks.");
-            while (flapjackStack.Count > 0)
-            {
+            Console.WriteLine($"{Name} is eating flapjacks.\n");
+            while (this.flapjackStack.Count > 0)
                 Console.WriteLine($"{Name} ate a {flapjackStack.Pop()}");
-            }
         }
 
         public Lumberjack(string name)
         {
             Name = name;
+
         }
     }
 }
