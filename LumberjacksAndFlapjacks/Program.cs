@@ -28,7 +28,7 @@ namespace LumberjacksAndFlapjacks
                     Lumberjack lumberjack = new Lumberjack(lumberjacksName);
                     for (int i = 0; i < numberOfFlapjacks; i++)
                     {
-                        lumberjack.TakeFlapjack((Flapjack)random.Next(0, 3));
+                        lumberjack.TakeFlapjack((Flapjack)random.Next(0, 4));
                     }
                     lumberjackQueue.Enqueue(lumberjack);
 
