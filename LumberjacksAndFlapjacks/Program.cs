@@ -11,8 +11,6 @@ namespace LumberjacksAndFlapjacks
         {
 
             Queue<Lumberjack> lumberjackQueue = new Queue<Lumberjack>();
-
-
             while (true)
             {
                 string lumberjacksName;
